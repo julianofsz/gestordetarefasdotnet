@@ -19,7 +19,7 @@ namespace GestorDeTarefas.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            // Evita reconfigurar o optionsBuilder se já estiver configurado externamente (como no Startup)
+            // Evita reconfigurar o optionsBuilder se já estiver configurado externamente
             if (!optionsBuilder.IsConfigured)
             {
                 var connectionString = _configuration.GetConnectionString("MySqlConnection");
